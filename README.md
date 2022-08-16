@@ -28,17 +28,21 @@ Examples with docker run and various options:
 - docker ps : displays running containers
 - docker ps -a : all container stopped and running
 - docker ps -a | grep <container_name> : easily find
-- docker rm #containerId : deletes the container
+- docker rm #container_id : deletes the container
 
 ### TroubleShooting containers
 
-- docker logs <containerId | containerName>
-- docker exec -it <containerId | containerName> (bash or sh)
+- docker logs <container_id | container_name>
+- docker exec -it <container_id | container_name> (bash or sh)
 
 ### Networks
 
 - docker network create <newtwork_name>
 - docker network ls: display list of network
+- docker network inspect <network_name> : detail of the network with all connected containers
+- docker network connect <network_name | network_id> <container_id | container_name>
+- docker network disconnect <network> <container>
+- docker network rm <network_name | network_id>: remove the network
 
 ### Volumes
 
